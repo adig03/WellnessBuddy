@@ -1,8 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.WellnessBuddy" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Light Theme Colors -->
+        <item name="colorPrimary">@color/color_primary_light</item>
+        <item name="colorPrimaryVariant">@color/color_secondary_light</item>
+        <item name="colorOnPrimary">@color/color_on_primary_light</item>
+        <item name="android:colorBackground">@color/color_background_light</item>
+        <item name="colorSurface">@color/color_surface_light</item>
+        <item name="colorSecondary">@color/color_secondary_light</item>
     </style>
 
     <style name="Theme.WellnessBuddy" parent="Base.Theme.WellnessBuddy" />
