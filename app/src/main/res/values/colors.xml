@@ -5,6 +5,7 @@
 
     <!-- Light Theme Colors -->
     <color name="color_primary_light">#3461FD</color>
+    <color name="color_bg_light">#F5F9FE</color>
     <color name="color_background_light">#faf8ff</color>
     <color name="color_surface_light">#faf8ff</color>
     <color name="color_on_primary_light">#ffffff</color> <!-- White for contrast on primary color -->
