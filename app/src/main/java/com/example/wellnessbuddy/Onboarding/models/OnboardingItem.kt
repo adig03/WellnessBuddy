@@ -1,4 +1,4 @@
-package com.example.wellnessbuddy.Onboarding
+package com.example.wellnessbuddy.Onboarding.models
 
 
 data class OnboardingItem (

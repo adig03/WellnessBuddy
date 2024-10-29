@@ -1,9 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".auth.Fragments.OtpFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".auth.Fragments.OtpFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Toolbar
+                android:id="@+id/otpToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:navigationIcon="@drawable/ic_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-</FrameLayout>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:outlineAmbientShadowColor="@color/black"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/otpToolbar">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/forogot" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/otpTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Enter OTP"
+                android:textColor="@color/color_primary_light"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/viewExpYear"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/poppins"
+                android:text="Enter the OTP sent to your email and verify your account"
+                android:textAlignment="center"
+                android:textColor="@color/color_secondary_light"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/otpTitle" />
+
+
+            <LinearLayout
+                android:id="@+id/otpLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/viewExpYear"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="@+id/viewExpYear"
+                app:layout_constraintTop_toBottomOf="@+id/viewExpYear">
+
+                <!-- First Box -->
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/otp_et_bg"
+                    android:gravity="center"
+                    android:backgroundTint="@color/color_bg_light"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+
+                <!-- Second Box -->
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="@color/color_bg_light"
+                    android:background="@drawable/otp_et_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+
+                <!-- Third Box -->
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="@color/color_bg_light"
+                    android:background="@drawable/otp_et_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+
+                <!-- Fourth Box -->
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/otp_et_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:backgroundTint="@color/color_bg_light"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+
+                <!-- Fifth Box -->
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/otp_et_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:backgroundTint="@color/color_bg_light"
+                    android:maxLength="1"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/otpBtn"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/color_primary_light"
+                android:drawablePadding="8dp"
+                android:layout_marginHorizontal="30dp"
+                android:elevation="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:shadowColor="@color/black"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textColor="#FFFF"
+                app:cornerRadius="12dp"
+                app:layout_constraintTop_toBottomOf="@id/otpLinearLayout"
+                app:layout_constraintStart_toStartOf="@id/otpLinearLayout"
+                app:layout_constraintEnd_toEndOf="@id/otpLinearLayout"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="374dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

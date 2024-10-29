@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.wellnessbuddy.Onboarding.models.OnboardingItem
 import com.example.wellnessbuddy.R
 
 class OnBoardingItemAdapter(private val onboardingItems : List<OnboardingItem> )  :
