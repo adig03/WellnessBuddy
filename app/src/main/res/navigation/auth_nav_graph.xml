@@ -3,20 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/auth_nav_graph"
-    app:startDestination="@id/introFragment">
+    app:startDestination="@id/signUpFragment">
 
-    <fragment
-        android:id="@+id/introFragment"
-        android:name="com.example.wellnessbuddy.auth.Fragments.IntroFragment"
-        android:label="fragment_intro"
-        tools:layout="@layout/fragment_intro" >
-        <action
-            android:id="@+id/action_introFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
-        <action
-            android:id="@+id/action_introFragment_to_confirmFragment"
-            app:destination="@id/confirmFragment" />
-    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.wellnessbuddy.auth.Fragments.LoginFragment"
@@ -72,5 +60,8 @@
         <action
             android:id="@+id/action_otpFragment_to_confirmFragment2"
             app:destination="@id/confirmFragment" />
+        <action
+            android:id="@+id/action_otpFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
     </fragment>
 </navigation>

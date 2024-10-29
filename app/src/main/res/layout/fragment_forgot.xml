@@ -1,122 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
-    android:background="@color/white"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".auth.Fragments.ForgotFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-  <Toolbar
-      android:id="@+id/forgotPassToolbar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      android:navigationIcon="@drawable/ic_back" />
-
-
-  <androidx.cardview.widget.CardView
-
-      android:id="@+id/imageView2"
-      android:layout_width="wrap_content"
-  android:layout_height="wrap_content"
-  app:cardCornerRadius="16dp"
-      android:outlineAmbientShadowColor="@color/black"
-      android:layout_marginTop="60dp"
-  app:cardElevation="8dp"
-  app:layout_constraintEnd_toEndOf="parent"
-  app:layout_constraintStart_toStartOf="parent"
-  app:layout_constraintTop_toBottomOf="@id/forgotPassToolbar">
-
-  <ImageView
-      android:layout_width="160dp"
-      android:layout_height="160dp"
-
-      android:src="@drawable/forogot"
-  android:scaleType="centerCrop"
-  />
-
-</androidx.cardview.widget.CardView>
-
-  <TextView
-      android:id="@+id/forgotTitle"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:fontFamily="@font/poppins_bold"
-      android:text="Forgot Password"
-      android:textColor="@color/color_primary_light"
-      android:textSize="28sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-  <TextView
-      android:id="@+id/viewExpYear"
-      android:layout_width="260dp"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_margin="16dp"
-      android:fontFamily="@font/poppins"
-      app:layout_constraintTop_toBottomOf="@id/forgotTitle"
-      android:text="Provide your account's email for which you want to reset your password!"
-      android:textAlignment="center"
-      android:textColor="@color/color_secondary_light"
-      android:textSize="14sp"
-      android:textStyle="bold"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent" />
-
-
-  <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/textInputlayoutForgot"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginHorizontal="30dp"
-      android:hint="Enter your email"
-      android:layout_marginTop="16dp"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      app:endIconMode="clear_text"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toBottomOf="@id/viewExpYear">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/ForgotEmail"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:background="@color/color_bg_light"
-        android:textColorHint="@color/color_primary_light"
-        android:fontFamily="@font/poppins"/>
-  </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/frameLayout"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".auth.Fragments.ForgotFragment">
+
+            <Toolbar
+                android:id="@+id/forgotPassToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:navigationIcon="@drawable/ic_back" />
+
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:layout_marginTop="60dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/forgotPassToolbar">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+
+                    android:src="@drawable/forogot"
+                    android:scaleType="centerCrop"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/forgotTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Forgot Password"
+                android:textColor="@color/color_primary_light"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/viewExpYear"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/poppins"
+                app:layout_constraintTop_toBottomOf="@id/forgotTitle"
+                android:text="Provide your account's email for which you want to reset your password!"
+                android:textAlignment="center"
+                android:textColor="@color/color_secondary_light"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputlayoutForgot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:hint="Enter your email"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewExpYear">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ForgotEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:background="@color/color_bg_light"
+                    android:textColorHint="@color/color_primary_light"
+                    android:fontFamily="@font/poppins"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
 
 
-  <com.google.android.material.button.MaterialButton
-      android:id="@+id/signupBtn"
-      style="@style/Widget.Material3.Button.OutlinedButton"
-      android:layout_width="0dp"
-      android:layout_height="56dp"
-      android:backgroundTint="#3461FD"
-      android:drawablePadding="8dp"
-      android:layout_marginTop="16dp"
-      android:fontFamily="@font/poppins_medium"
-      android:shadowColor="@color/black"
-      android:text="Continue"
-      android:elevation="8dp"
-      android:textAllCaps="false"
-      android:textColor="#FFFF"
-      app:cornerRadius="12dp"
-      app:layout_constraintEnd_toEndOf="@+id/textInputlayoutForgot"
-      app:layout_constraintStart_toStartOf="@+id/textInputlayoutForgot"
-      app:layout_constraintTop_toBottomOf="@+id/textInputlayoutForgot" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signupBtn"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:backgroundTint="#3461FD"
+                android:drawablePadding="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:shadowColor="@color/black"
+                android:text="Continue"
+                android:elevation="8dp"
+                android:textAllCaps="false"
+                android:textColor="#FFFF"
+                app:cornerRadius="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/textInputlayoutForgot"
+                app:layout_constraintStart_toStartOf="@+id/textInputlayoutForgot"
+                app:layout_constraintTop_toBottomOf="@+id/textInputlayoutForgot" />
 
 
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

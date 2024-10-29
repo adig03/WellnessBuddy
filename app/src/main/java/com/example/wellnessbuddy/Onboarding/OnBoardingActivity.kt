@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.wellnessbuddy.Onboarding.models.OnboardingItem
 import com.example.wellnessbuddy.R
 import com.example.wellnessbuddy.auth.AuthActivity
 import com.google.android.material.button.MaterialButton
@@ -21,7 +22,7 @@ class OnBoardingActivity : AppCompatActivity() {
     private lateinit var indicatorsContainer: LinearLayout
     private val handler = Handler(Looper.getMainLooper())
     private var currentPage = 0
-    private val autoSlideDelay: Long = 2000 // Set the delay (in milliseconds)
+    private val autoSlideDelay: Long = 4000 // Set the delay (in milliseconds)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,18 +73,18 @@ class OnBoardingActivity : AppCompatActivity() {
             if (onboardingViewPager.currentItem + 1 < onBoardingItemAdapter.itemCount) {
                 onboardingViewPager.currentItem += 1
             } else {
-                navigationToHomeActivity()
+                navigationToAuthActivity()
             }
         }
         findViewById<TextView>(R.id.textSkip).setOnClickListener {
-            navigationToHomeActivity()
+            navigationToAuthActivity()
         }
         findViewById<MaterialButton>(R.id.btnGetStarted).setOnClickListener {
-            navigationToHomeActivity()
+            navigationToAuthActivity()
         }
     }
 
-    private fun navigationToHomeActivity() {
+    private fun navigationToAuthActivity() {
         startActivity(Intent(applicationContext, AuthActivity::class.java))
         finish()
     }
