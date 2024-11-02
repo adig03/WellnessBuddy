@@ -30,7 +30,9 @@ private lateinit var binding : FragmentOtpBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+           binding.otpBtn.setOnClickListener{
+               findNavController().navigate(R.id.action_otpFragment_to_confirmFragment)
+           }
         binding.otpToolbar.setNavigationOnClickListener{
             findNavController().navigate(R.id.action_otpFragment_to_signUpFragment)
         }
