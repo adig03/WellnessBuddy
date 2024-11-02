@@ -5,6 +5,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         tools:context=".auth.Fragments.OtpFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,7 +94,7 @@
                     android:layout_margin="4dp"
                     android:background="@drawable/otp_et_bg"
                     android:gravity="center"
-                    android:backgroundTint="@color/color_bg_light"
+
                     android:inputType="number"
                     android:maxLength="1"
                     android:textSize="20sp" />
@@ -104,7 +105,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_margin="4dp"
-                    android:backgroundTint="@color/color_bg_light"
+
                     android:background="@drawable/otp_et_bg"
                     android:gravity="center"
                     android:inputType="number"
@@ -117,7 +118,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_margin="4dp"
-                    android:backgroundTint="@color/color_bg_light"
+
                     android:background="@drawable/otp_et_bg"
                     android:gravity="center"
                     android:inputType="number"
@@ -125,6 +126,8 @@
                     android:textSize="20sp" />
 
                 <!-- Fourth Box -->
+
+                <!-- Fifth Box -->
                 <EditText
                     android:id="@+id/editText4"
                     android:layout_width="48dp"
@@ -133,11 +136,10 @@
                     android:background="@drawable/otp_et_bg"
                     android:gravity="center"
                     android:inputType="number"
-                    android:backgroundTint="@color/color_bg_light"
+
                     android:maxLength="1"
                     android:textSize="20sp" />
 
-                <!-- Fifth Box -->
                 <EditText
                     android:id="@+id/editText5"
                     android:layout_width="48dp"
@@ -146,7 +148,7 @@
                     android:background="@drawable/otp_et_bg"
                     android:gravity="center"
                     android:inputType="number"
-                    android:backgroundTint="@color/color_bg_light"
+
                     android:maxLength="1"
                     android:textSize="20sp" />
 
